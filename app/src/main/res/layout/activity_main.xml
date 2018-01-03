@@ -16,7 +16,7 @@
         diagonal:backgroundColor="#00F44336"
         diagonal:diagonalGravity="right"
 
-        diagonal:angle="8"/>
+        diagonal:angle="10"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"
