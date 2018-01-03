@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    xmlns:diagonal="http://schemas.android.com/apk/res-auto"
+    tools:context="com.manu.movieconceptappjava.MainActivity">
+    <developer.shivam.library.DiagonalView android:id="@+id/diagonal_view"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:src="@mipmap/trailer"
+        android:scaleType="centerCrop"
+        diagonal:diagonalColor="@color/colorPrimaryDark"
+        diagonal:backgroundColor="#00F44336"
+        diagonal:diagonalGravity="right"
+
+        diagonal:angle="8"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:tint="@android:color/white"
+        android:visibility="visible"
+        app:backgroundTint="#FFE438"
+        app:elevation="4dp"
+        app:fabSize="normal"
+        app:rippleColor="@android:color/holo_orange_light"
+        diagonal:srcCompat="@mipmap/camera"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="145dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="160dp"
+        android:text="Bahubali"
+        android:textSize="27dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The Conclusion" android:textSize="18dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="30dp"
+         />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:numStars="5"
+        android:rating="3"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_marginTop="30dp"
+         />
+
+    <LinearLayout
+        android:id="@+id/titleLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="45dp"
+      android:gravity="center|start"
+        android:paddingLeft="25dp"
+        android:orientation="horizontal"
+       >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="9sp"
+            android:padding="5dp"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textviewborder"
+            android:text="ADVENTURE" />
+
+        <TextView
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textSize="9sp"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/textviewborder"
+            android:text="FAMILY" />
+
+        <TextView
+            android:padding="5dp"
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:textSize="9sp"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textviewborder"
+            android:text="FANTASY" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="307dp"
+        android:layout_marginTop="45dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleLayout">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabPaddingEnd="10dp"
+            app:tabPaddingStart="10dp"
+            app:tabMode="fixed" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
